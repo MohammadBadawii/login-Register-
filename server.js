@@ -20,15 +20,6 @@ const connection = mongoose.connection;
 connection.once('open',function(){
     console.log("MongoDB DB Connection established succesfully");
 })
-
-
-
-
-// mongoose
-//     .connect(mongoURI,{useNewUrlParser : true})
-//     .then(()=>console.log("MongoDB connected"))
-//     .catch(err => console.log(err))
-
 var Users = require('./routes/Users')
 
 app.use('/users',Users)
