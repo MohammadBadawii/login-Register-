@@ -58,7 +58,7 @@ users.post('/loginnn',(req,res)=>{
     })
     .then(user =>{
         if(user){
-            if(bcryptjs.compareSync(req.password, user.password)){
+            if(bcrypt.compareSync(req.password, user.password)){
                 const payload = {
                     _id: user._id,
                     first_name: user.first_name,
